@@ -13,9 +13,11 @@ docker attach gifted_rhodes
 # Start apache and my sql
 
 service apache2 start
+
 service mysql start
 
 # Update database with user1 and pass1
+
 mysql
 
 CREATE USER 'user1'@'localhost' IDENTIFIED BY 'pass1';
@@ -23,5 +25,3 @@ CREATE USER 'user1'@'localhost' IDENTIFIED BY 'pass1';
 GRANT ALL PRIVILEGES ON *.* TO 'user1'@'localhost';
 
 # Open browser to 172.17.0.2 or whatever docker container address is.
-# If container address is different than above IP, PHP and MySQL links will not work.  You will have to manually add info.php and  
-my.php to your IP Address.
