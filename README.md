@@ -7,7 +7,11 @@ docker build -t ubuntu-docker-lamp-1 .
 # Run your first container.
 docker run -itd ubuntu-docker-lamp-1
 
-# Attach to container.  In this cast gifted_rhodes is the container name.
+# Attach to container.  In this case gifted_rhodes is the container name.
+# Find container name
+
+docker ps -a
+
 docker attach gifted_rhodes
 
 # Start apache and my sql
