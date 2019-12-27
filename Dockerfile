@@ -10,8 +10,8 @@ RUN apt-get install php-mysql -y
 RUN apt-get install libapache2-mod-php7.2 -y
 RUN apt install git -y
 RUN git clone https://github.com/BlackrockDigital/startbootstrap-landing-page.git
+RUN mv /var/www/html/index.html /var/www/html/index.main 
 RUN cp -r startbootstrap-landing-page/. /var/www/html
-RUN git clone https://github.com/stevecosner/lamp-files.git
 RUN cp -r lamp-files/. /var/www/html
 RUN mv /etc/apache2/mods-enabled/php7.2.conf /etc/apache2/mods-enabled/php7.2.conf.backup
 RUN cp lamp-files/php7.2.conf /etc/apache2/mods-enabled/
